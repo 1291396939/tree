@@ -1,1 +1,33 @@
-
+// 创建树
+			function build()
+			{
+				mydiv(tree[0],"h1");
+				 for(i=1;i<branch.length;i++)
+				 {
+					mydiv(branch[i],"h3");
+					leaves=root[i];
+					for(j=0;j<leaves.length;j++)
+					{
+						mydiv(leaves[j],"p");
+					}
+				 }
+			}
+			// 打印元素
+			function mydiv(data1,data2)
+			{
+				var para=document.createElement(data2);
+				var node=document.createTextNode(data1);
+				para.appendChild(node);
+				var element=document.getElementById("div1");
+				element.appendChild(para);
+			}
+		</script>
+		
+		<textarea id="input" ></textarea>	
+		<button type="button" onclick="treestring()">创建一个树</button>
+		
+		<!-- <button type="button" onclick="mydiv()">创建div</button> -->
+		
+		<div id="div1"></div>
+	</body>
+</html>
